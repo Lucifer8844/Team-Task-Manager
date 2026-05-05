@@ -1,0 +1,21 @@
+<h2>Assign Task</h2>
+
+<form (ngSubmit)="assign()">
+
+  <input [(ngModel)]="title" name="title" placeholder="Title" required />
+  <br /><br />
+
+  <input [(ngModel)]="status" name="status" placeholder="Status (TODO / DONE)" required />
+  <br /><br />
+
+  <input [(ngModel)]="dueDate" name="dueDate" placeholder="Due Date (YYYY-MM-DD)" />
+  <br /><br />
+
+  <input [(ngModel)]="projectId" name="projectId" placeholder="Project ID" required />
+  <br /><br />
+
+  <input [(ngModel)]="userId" name="userId" placeholder="User ID" required />
+  <br /><br />
+
+  <button type="submit">Assign Task</button>
+</form>

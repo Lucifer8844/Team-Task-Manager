@@ -1,0 +1,16 @@
+# Ignore heavy library folders
+node_modules/
+dist/
+target/
+
+# Ignore IDE settings
+.metadata/
+.settings/
+.project
+.classpath
+.factorypath
+bin/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

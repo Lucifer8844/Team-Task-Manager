@@ -1,0 +1,16 @@
+<div class="container" style="padding: 20px;">
+  <h2>My Tasks</h2>
+  <div *ngIf="tasks.length === 0">No tasks assigned.</div>
+  
+  <div *ngFor="let task of tasks" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 5px;">
+    <h3 style="margin-top: 0;">{{ task.name || task.title }}</h3>
+    <p><strong>Description:</strong> {{ task.description }}</p>
+    <p><strong>Status:</strong> <span style="color: blue;">{{ task.status }}</span></p>
+    
+    <!-- Status Update Button -->
+    <button (click)="updateStatus(task.id, 'COMPLETED')" 
+            style="background-color: #28a745; color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">
+      Mark as Completed
+    </button>
+  </div>
+</div>

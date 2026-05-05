@@ -1,0 +1,27 @@
+<h2>Dashboard</h2>
+
+<button (click)="logout()">Logout</button>
+
+<hr />
+
+<!-- ADMIN -->
+<div *ngIf="role === 'ROLE_ADMIN'">
+  <h3>Admin Panel</h3>
+
+  <button routerLink="/create-project">Create Project</button>
+  <br /><br />
+
+  <button routerLink="/view-projects">View Projects</button>
+  <br /><br />
+
+  <button routerLink="/assign-task">Assign Task</button>
+</div>
+
+<!-- MEMBER -->
+<div *ngIf="role === 'ROLE_MEMBER'">
+  <h3>Member Panel</h3>
+
+  <button routerLink="/view-tasks">View My Tasks</button>
+  <br /><br />
+
+</div>

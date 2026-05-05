@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Projects</h2>
+  <table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Project Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Verify the * is there and 'projects' matches the TS variable name -->
+      <tr *ngFor="let project of projects">
+        <td>{{ project.id }}</td>
+        <td>{{ project.name }}</td>
+        <td>{{ project.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Safety check: if the table is empty, show this -->
+  <div *ngIf="projects.length === 0" style="color: red; padding: 10px;">
+    No projects found in the array. Check console for "PROJECT DATA".
+  </div>
+</div>
