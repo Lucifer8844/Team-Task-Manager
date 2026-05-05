@@ -1,4 +1,4 @@
-FROM node:22
+FROM node:20
 
 WORKDIR /app
 
@@ -9,4 +9,4 @@ RUN npm run build
 
 RUN npm install -g serve
 
-CMD ["serve", "-s", "dist/frontend", "-l", "3000"]
+CMD ["serve", "-s", "dist/frontend/browser", "-l", "3000"]
