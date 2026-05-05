@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Project {
-  private baseUrl = 'http://localhost:8080/api/admin';
+  private baseUrl = 'https://intuitive-consideration-production.up.railway.app/api/admin';
 
   constructor(private http: HttpClient) {}
 
