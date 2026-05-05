@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class Task {
-  private baseUrl = 'http://localhost:8080/api';
+  private baseUrl = 'https://intuitive-consideration-production.up.railway.app/api';
 
   constructor(private http: HttpClient) {}
 
